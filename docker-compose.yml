@@ -1,0 +1,29 @@
+version: "3"
+
+volumes:
+  mongodata:
+
+services:
+  crawler:
+    container_name: wikihotel-crawler-parser
+    build:
+      context: ./crawler-parser
+      dockerfile: Dockerfile
+    ports:
+      - "8080:3000"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      - DB_URL=mongodb://wikihotel_data
+    depends_on:
+      - database
+    restart: always
+
+  database:
+    container_name: wikihotel-database
+    image: mongo
+    volumes:
+      - mongodata:/data/db
+    ports:
+      - "27018:27017"

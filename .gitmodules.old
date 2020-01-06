@@ -1,0 +1,12 @@
+[submodule "holly-crawler-parser"]
+	path = holly-crawler-parser
+	url = https://github.com/mygetzu/holly-crawler-parser.git
+[submodule "holly-translator-with-sentiment"]
+	path = holly-translator-with-sentiment
+	url = https://github.com/mygetzu/holly-translator-with-sentiment.git
+[submodule "holly-crawler-parser-node"]
+	path = holly-crawler-parser-node
+	url = https://github.com/mygetzu/holly-crawler-parser-node.git
+[submodule "holly-clustering-spark"]
+	path = holly-clustering-spark
+	url = https://github.com/mygetzu/holly-clustering-spark.git
